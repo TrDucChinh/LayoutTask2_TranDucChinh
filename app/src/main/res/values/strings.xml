@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LayoutTask2</string>
+    <string name="appbar_name">S2Note</string>
+    <string name="title_description">Today: Start trial</string>
+    <string name="description">Gain full access for your Premium subscription</string>
+    <string name="trial_with_price">3 day free trial then %1$s per week</string>
+    <string name="title_bottom">Auto renew, cancel anytime.</string>
+    <string name="btn_try">Try For Free</string>
+    <string name="term">Payment will be charged to your Google Play account upon confirmation of purchase or at the end of the trial period (if applicable). Subscription will automatically renew according to the subscription plan you choose unless canceled 24 hours before the end of the current subscription plan or trial period (if you have a trial). Non-subscribed users can still use the application however some paid features may be limited. You can manage or cancel your subscription at any time in your Google Play account.</string>
+
+</resources>

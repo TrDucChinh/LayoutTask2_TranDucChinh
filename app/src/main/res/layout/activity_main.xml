@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="price"
+            type="String" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:context=".MainActivity">
+
+            <include
+                android:id="@+id/appbar"
+                layout="@layout/appbar" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_bg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:src="@drawable/img_back"
+                app:layout_constraintBottom_toBottomOf="@id/container_description"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appbar"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintWidth_percent="0.56" />
+
+            <include
+                android:id="@+id/container_description"
+                layout="@layout/description_section"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_25sdp"
+                app:layout_constraintHeight_percent="0.31"
+                app:layout_constraintTop_toBottomOf="@id/img_bg" />
+
+            <LinearLayout
+                android:id="@+id/container_bottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_description">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_sans_regular"
+                    android:text="@string/title_bottom"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_sans_regular"
+                    android:text='@{String.format(@string/trial_with_price, price)}'
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_try"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_56sdp"
+                    android:layout_marginHorizontal="@dimen/_32sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/bg_btn"
+                    android:fontFamily="@font/nunito_sans_semi_bold"
+                    android:text="@string/btn_try"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sdp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:lineSpacingExtra="4dp"
+                android:paddingHorizontal="@dimen/_4sdp"
+                android:text="@string/term"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_bottom" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
