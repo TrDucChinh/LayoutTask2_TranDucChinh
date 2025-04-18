@@ -32,16 +32,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpUI() {
         binding.apply {
-            price = "\$ 1,000.00"
-            containerDescription.description1.tvTitle.text = "Today: Start trial"
-            containerDescription.description1.tvDescription.text =
-                "Gain full access for your Premium subscription"
-            containerDescription.description2.tvTitle.text = "Day 2: Get reminded"
-            containerDescription.description2.tvDescription.text =
-                "Receive a notification when your trial is about to end"
-            containerDescription.description3.tvTitle.text = "Day 3: Free trial ends"
-            containerDescription.description3.tvDescription.text =
-                "Your Premium subscription begins and you’ll be charged"
+            price = getString(R.string.price)
+            with(containerDescription){
+                tvTitle1.text = getString(R.string.title1)
+                tvDescription1.text = getString(R.string.description1)
+                tvTitle2.text = getString(R.string.title2)
+                tvDescription2.text = getString(R.string.description2)
+                tvTitle3.text = getString(R.string.title3)
+                tvDescription3.text = getString(R.string.description3)
+            }
         }
     }
 }

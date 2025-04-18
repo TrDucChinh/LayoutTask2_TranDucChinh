@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="price"
             type="String" />
@@ -19,44 +18,48 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/main"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/white"
             tools:context=".MainActivity">
 
             <include
                 android:id="@+id/appbar"
-                layout="@layout/appbar" />
+                layout="@layout/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent" />
+
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/img_bg"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="@dimen/_35sdp"
-                android:src="@drawable/img_back"
-                app:layout_constraintBottom_toBottomOf="@id/container_description"
-                app:layout_constraintDimensionRatio="1:1"
+                app:srcCompat="@drawable/img_back"
+                app:layout_constraintDimensionRatio="203:188"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/appbar"
-                app:layout_constraintVertical_bias="0"
                 app:layout_constraintWidth_percent="0.56" />
 
             <include
                 android:id="@+id/container_description"
                 layout="@layout/description_section"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
                 android:layout_marginTop="@dimen/_25sdp"
-                app:layout_constraintHeight_percent="0.31"
                 app:layout_constraintTop_toBottomOf="@id/img_bg" />
+
 
             <LinearLayout
                 android:id="@+id/container_bottom"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_40sdp"
                 android:gravity="center"
                 android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/tv_terms"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/container_description">
@@ -84,7 +87,7 @@
                     android:id="@+id/btn_try"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_56sdp"
-                    android:layout_marginHorizontal="@dimen/_32sdp"
+                    android:layout_marginHorizontal="@dimen/_25sdp"
                     android:layout_marginTop="@dimen/_12sdp"
                     android:background="@drawable/bg_btn"
                     android:fontFamily="@font/nunito_sans_semi_bold"
@@ -98,7 +101,7 @@
                 android:id="@+id/tv_terms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_32sdp"
+                android:layout_marginHorizontal="@dimen/_25sdp"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:fontFamily="@font/roboto_regular"
                 android:lineSpacingExtra="4dp"

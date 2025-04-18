@@ -7,5 +7,11 @@
     <string name="title_bottom">Auto renew, cancel anytime.</string>
     <string name="btn_try">Try For Free</string>
     <string name="term">Payment will be charged to your Google Play account upon confirmation of purchase or at the end of the trial period (if applicable). Subscription will automatically renew according to the subscription plan you choose unless canceled 24 hours before the end of the current subscription plan or trial period (if you have a trial). Non-subscribed users can still use the application however some paid features may be limited. You can manage or cancel your subscription at any time in your Google Play account.</string>
-
+    <string name="title1">Today: Start trial</string>
+    <string name="title2">Day 2: Get reminded</string>
+    <string name="title3">Day 3: Free trial ends</string>
+    <string name="description1">Gain full access for your Premium subscription</string>
+    <string name="description2">Receive a notification when your trial is about to end</string>
+    <string name="description3">Your Premium subscription begins and you’ll be charged</string>
+    <string name="price">1,000.00</string>
 </resources>
